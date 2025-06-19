@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-black min-h-screen text-white font-sans overflow-x-hidden;
+  }
+}
+
+@layer components {
+  .video-background {
+    @apply fixed top-0 left-0 w-full h-full object-cover opacity-60 -z-10 pointer-events-none;
+    aspect-ratio: 16/9;
+    transform: scale(1.5);
+  }
+
+  .glass-card {
+    @apply bg-purple-900/20 backdrop-blur-lg border border-purple-500/20 rounded-lg shadow-lg shadow-purple-500/10;
+  }
+  
+  .neon-text {
+    @apply text-purple-400 drop-shadow-[0_0_5px_rgba(192,132,252,0.5)];
+  }
+
+  .breathing {
+    animation: breathing 3s ease-in-out infinite;
+  }
+
+  .glow {
+    animation: glow 2s ease-in-out infinite;
+  }
+
+  .spotify-controls {
+    @apply fixed bottom-0 left-0 right-0 bg-black/80 backdrop-blur-lg border-t border-purple-500/20 p-4;
+  }
+
+  .music-progress {
+    @apply w-full h-1 bg-purple-900/50 rounded-full overflow-hidden;
+  }
+
+  .music-progress-bar {
+    @apply h-full bg-purple-500 rounded-full;
+  }
+}
+
+@keyframes breathing {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 20px rgba(192, 132, 252, 0.2);
+  }
+  50% {
+    transform: scale(1.02);
+    box-shadow: 0 0 30px rgba(192, 132, 252, 0.4);
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    text-shadow: 0 0 10px rgba(192, 132, 252, 0.5);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(192, 132, 252, 0.8);
+  }
+} 
