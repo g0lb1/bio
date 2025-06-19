@@ -100,17 +100,16 @@ function App() {
   return (
     <div className="app-container">
       <div className="background-video">
-        <video
-          ref={videoRef}
-          src="/src/public/video.mp4"
-          autoPlay
-          muted
-          loop
-          playsInline
-          disablePictureInPicture
-        />
+      <video
+        ref={videoRef}
+        src="https://files.catbox.moe/nfiphz.mp4"
+        autoPlay
+        muted
+        loop
+        playsInline
+        disablePictureInPicture
+      />
       </div>
-
       <div className="content">
         <h1 className="title">
           Golb
@@ -230,7 +229,7 @@ function App() {
 
       <audio
         ref={audioRef}
-        src="/src/public/background.mp3"
+        src="https://files.catbox.moe/moatmr.mp3"
         loop
         autoPlay
       />
